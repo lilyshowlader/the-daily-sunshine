@@ -16,12 +16,13 @@ function App() {
       setData(response.data)
       console.log(response.data)
     })
+    setLocation('')
     }
   }
 
   return (
     <div className="container-one">
-      <div classname='search'>
+      <div className='search'>
         <input
         value={location}
         onChange={event => setLocation(event.target.value)} 
@@ -36,24 +37,24 @@ function App() {
       </div>
 
       <div className='item-two'>
-  
+
           <div className='location'>
-            <p>Zocca</p> 
+            <p>{data.name}</p> 
           </div>
           <div className='temperature'>
-            <p>65</p>
+            {data.main ? <p>{data.main.temp}</p> : null}
           </div>
           <div className='description'>
-            <p>Rainy</p>
-          </div>
+            {data.weather ? <p>{data.weather[0].main}</p> : null}
+          </div> 
           <div className='feels'>
-            <p>60</p>
+            {data.main ? <p>{data.main.feels_like}</p> : null}
           </div>
           <div className='humidity'> 
-            <p>25%</p>
+            {data.main ? <p>{data.main.humidity}%</p> : null}
           </div>
           <div className='wind'>
-            <p>30mph</p>
+            {data.wind ? <p>{data.wind.speed}mph</p> : null}
           </div>
       </div>
   </div>
