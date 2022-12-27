@@ -44,6 +44,7 @@ h5 {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    height: 100vh;
   }
 
   .app_name {
