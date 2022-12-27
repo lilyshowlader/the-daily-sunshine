@@ -29,7 +29,6 @@ function App() {
 
       <div className='item-two'>
         <p>enter your location.</p>
-      {/* <div className='search'> */}
         <input
         value={location}
         onChange={event => setLocation(event.target.value)} 
@@ -37,26 +36,13 @@ function App() {
         onKeyPress={searchLocation}
         type='text'>
         </input>
-      {/* </div> */}
-          {/* <div className='location'> */}
-            <h3>{data.name}</h3> 
-          {/* </div>
-          <div className='description'> */}
-            {data.weather ? <h5>{data.weather[0].main}</h5> : null}
-          {/* </div>
-          <div className='temperature'> */}
-            {data.main ? <h5>temp: {data.main.temp}°F</h5> : null}
-          {/* </div> */}
-  
-          {/* <div className='feels'> */}
-            {data.main ? <h5>feels like: {data.main.feels_like.toFixed()}°F</h5> : null}
-          {/* </div>
-          <div className='humidity'>  */}
-            {data.main ? <h5>humidity: {data.main.humidity}%</h5> : null}
-          {/* </div>
-          <div className='wind'> */}
-            {data.wind ? <h5>wind: {data.wind.speed.toFixed()}mph</h5> : null}
-          {/* </div> */}
+          <h3>{data.name}</h3> 
+          {data.weather ? <h5>{data.weather[0].main}</h5> : null}
+          {data.main ? <h5>temp: {data.main.temp.toFixed()}°F</h5> : null}
+          {data.main ? <h5>high: {data.main.temp_max.toFixed()}°F</h5> : null}{data.main ? <h5>low: {data.main.temp_min.toFixed()}°F</h5> : null}
+          {data.main ? <h5>feels like: {data.main.feels_like.toFixed()}°F</h5> : null}
+          {data.main ? <h5>humidity: {data.main.humidity}%</h5> : null}
+          {data.wind ? <h5>wind: {data.wind.speed.toFixed()}mph</h5> : null}
       </div>
       </div>
   </div>
