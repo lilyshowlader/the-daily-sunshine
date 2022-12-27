@@ -1,9 +1,7 @@
-.container-one {
+b.container-one {
   background-color: white;
-  /* min-height: 100vh; */
   display: flex;
-  /* justify-content: center;
-  align-items: center; */
+  justify-content: center;
   margin-top: 5px;
   height: 100px;
   color: black;
@@ -13,14 +11,67 @@
   order: 1;
   font-size: 100px;
   padding-left: 110px;
-  padding-right: 300px;
+  padding-right: 200px;
+  flex-basis: auto;
 }
 
 .item-two {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
   order: 2;
   font-size: 30px;
-  margin-top: 100px;
+  margin-top: 20px;
+  flex-basis: auto;
+}
+
+input {
+  padding: 10px;
+  margin-bottom: 25px;
+  text-align: center;
+  border-radius: 15px;
+  font-family: 'Nanum Myeongjo'
+}
+
+h5 {
+  margin-bottom: 5px;
+  margin-top: 4px;
 }
 
 
+@media only screen and (max-width: 768px) {
+  .mobile {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
+  .app_name {
+    margin-top: 13px;
+    margin-bottom: 50px;
+  }
+
+
+  .container_one {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2px;
+    height: 650px;
+  }
+
+  .item-one {
+    order: 1;
+    padding-left: 50px;
+    font-size: 80px;
+  
+  }
+  
+  .item-two {
+    order: 2;
+    text-align: center;
+    font-size: 20px;
+  }
+
+}
