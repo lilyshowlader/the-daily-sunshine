@@ -1,6 +1,5 @@
 body {
   font-family: 'Nanum Myeongjo', serif;
-  margin: 0;
   height: 100vh;
   margin: 0 auto;
 }
@@ -70,11 +69,11 @@ h5 {
 
   .container_one {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-top: 2px;
-    height: 1000px;
+    height: 700px;
   }
 
   .item-one {
