@@ -28,7 +28,7 @@ function App() {
     }
   }
 
-  var dateWithoutSecond = new Date();
+  let dateWithoutSecond = new Date();
 
 
   return (
