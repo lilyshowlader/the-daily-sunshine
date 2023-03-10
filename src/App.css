@@ -1,13 +1,14 @@
 body {
   font-family: 'Nanum Myeongjo';
 }
-b.container-one {
+b.container-one > div {
   background-color: white;
   display: flex;
   justify-content: center;
   margin-top: 5px;
   height: 100px;
   color: black;
+  flex-direction: row;
 }
 
 
@@ -16,6 +17,7 @@ b.container-one {
   font-size: 100px;
   padding-left: 110px;
   padding-right: 200px;
+  flex: 1;
 }
 
 .item-two {
@@ -23,6 +25,7 @@ b.container-one {
   order: 2;
   font-size: 30px;
   margin-top: 20px;
+  flex: 1;
 }
 
 .time_and_date {

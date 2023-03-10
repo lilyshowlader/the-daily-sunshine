@@ -6,13 +6,14 @@ import { useState } from 'react';
 
 function App() {
   const [data, setData] = useState({})
-  // why did we set this to an empty object?
+  // set to empty object because the data we are receiving will come in an object. 
   const [location, setLocation] = useState('')
   // this was set to a empty string because the user will update the string
 
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=imperial&appid=596039e2c61ba9dc2c0bdb9bb1974245`
   // this is the url for the API call. the location was replaced with a template literal of location because that is what will change dynamically based on user input 
 
+  // function to search entered location. 
   const searchLocation = (event) => {
     if (event.key === 'Enter') {
       // look into event.key
@@ -23,7 +24,7 @@ function App() {
       console.log(event)
     })
     setLocation('')
-    console.log(setLocation)
+    // console.log(setLocation)
     // the above line of code resets the input back to an empty string after a search is initiated
     }
   }
